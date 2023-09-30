@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="utf-8">
+		<title>Pizza Creator</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+		<link rel="stylesheet" href="main.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700&amp;subset=latin-ext" rel="stylesheet">
+	</head>
+	<body>
+		<header>	
+			<h1>Create your pizza</h1>
+		</header>		
+		<main>	
+			<article>		
+				<form action="order.php" method="post">				
+					<div class="row">				
+						<fieldset>						
+							<legend>Size</legend>								
+							<div><label><input type="radio" value="1" name="size" checked>small</label></div>
+							<div><label><input type="radio" value="2" name="size">medium</label></div>
+							<div><label><input type="radio" value="3" name="size">large</label></div>
+							<div><label><input type="radio" value="4" name="size">extra large</label></div>							
+						</fieldset>					
+					</div>					
+					<div class="row">					
+						<label for="sauce">Sauce</label>
+						<select id="sauce" name="sauce">
+							<option value="t" selected>Tomato</option>
+							<option value="p">Pesto</option>
+							<option value="s">Spicy Red </option>
+							<option value="b">White</option>
+						</select>					
+					</div>					
+					<div class="row">
+						<fieldset>							
+								<legend>Pizza toppings</legend>		
+								<div class="col">
+									<div><label><input type="checkbox" value="1"  name="top[]" disabled checked>sauce</label></div>
+									<div><label><input type="checkbox" value="2"  name="top[]"  disabled checked>mozarella</label></div>
+									<div><label><input type="checkbox" value="3"  name="top[]">mascarpone</label></div>
+									<div><label><input type="checkbox" value="4"  name="top[]">fresh basil</label></div>
+								</div>								
+								<div class="col">
+									<div><label><input type="checkbox" value="5"  name="top[]">speck</label></div>
+									<div><label><input type="checkbox" value="6"  name="top[]">prosciutto crudo</label></div>
+									<div><label><input type="checkbox" value="7"  name="top[]">prosciutto cotto</label></div>
+									<div><label><input type="checkbox" value="8"  name="top[]">mushrooms</label></div>
+								</div>								
+								<div class="col">
+									<div><label><input type="checkbox" value="9"  name="top[]">rocket</label></div>
+									<div><label><input type="checkbox" value="10"  name="top[]">cocktail tomatoes</label></div>
+									<div><label><input type="checkbox" value="11"  name="top[]">mascarpone</label></div>
+									<div><label><input type="checkbox" value="12"  name="top[]">olives</label></div>
+								</div>
+						</fieldset>								
+					</div>
+					<div class="row">					
+						<label for="oil">Olive oil</label>
+						<div style="margin-top: 10px;">
+							<select id="oil" name="oil[]" multiple size="3">
+								<option value="b"selected>classic</option>
+								<option value="l">rosemary</option>
+								<option value="3">chilli</option>
+								<option value="d">garlic</option>
+							</select>
+						</div>
+					</div>					
+					<div class="row">
+						<label>Login <input type="text" name="login" placeholder="What's your login?"</label>
+						<label>Password <input type="password" name="haslo" placeholder="Write your password"</label>
+					</div>					
+					<div class="row">
+						<label>How many pizzas? <input type="number" name="quantity" step="1" min="1"></label>
+					</div>					
+					<div class="row">
+						<label>e-mail <input type="email" name="email"></label>
+						<label>phone <input type="tel" name="phone"></label>
+					</div>					
+					<div class="row">
+						<label>Delivery date <input type="date" name="day" min="2024-03-01" max="2024-03-31"></label>
+						<label>Preferred delivery time <input type="time" name="time" step="1"></label>
+					</div>					
+					<div class="row">
+						<div><label for="komentarz">Comments to order</label></div>
+						<textarea name="comment" id="comment" rows="4" cols="80" maxlength="1000"></textarea>
+					</div>					
+					<div class="row">
+						<input type="submit" value="Order">
+					</div>							
+				</form>						
+			</article>			
+		</main>
+	</body>
+</html>
